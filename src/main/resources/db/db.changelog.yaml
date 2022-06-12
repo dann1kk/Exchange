@@ -1,0 +1,21 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 01-create-tables
+      author: none
+      dbms: '!h2'
+      changes:
+        - sqlFile:
+            encoding: utf-8
+            splitStatements: false
+            path: db/migration/create-tables.sql
+
+  - changeSet:
+      id: 02-seed
+      author: none
+      dbms: '!h2'
+      changes:
+        - sqlFile:
+            encoding: utf-8
+            splitStatements: false
+            path: db/migration/seed.sql
